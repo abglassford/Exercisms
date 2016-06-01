@@ -11,7 +11,6 @@ Words.prototype.count = function(input){
 
   var newString = test2.split(' ')
 
-
   newString.sort()
 
   for(var j = 0; j < newString.length; j++){
