@@ -1,3 +1,5 @@
+//This program has ideas taken from https://github.com/Azdaroth/exercism.io/blob/master/javascript/beer-song/beer.js
+
 var BeerSong = function() {
 
   return {
