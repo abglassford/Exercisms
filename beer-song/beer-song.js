@@ -1,21 +1,30 @@
-var BeerSong = function(){}
+var BeerSong = function() {
 
-BeerSong.prototype.verse = function(input){
-  if(input === 1){
-    return input + ' bottle of beer on the wall, ' + input + ' bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n';
-  }else if(input === 0){
-    return 'No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n';
-  }else{
-    return input + ' bottles of beer on the wall, ' + input + ' bottles of beer.\nTake one down and pass it around, ' + (input - 1) + ' bottles of beer on the wall.\n';
-}
-}
-BeerSong.prototype.sing = function(first, last){
-    var bottle = first;
-    while(bottle >= last){
-      this.verse(bottle);
-      bottle--;
+  return {
+
+    verse: function(num) {
+      if (num ===  0){
+        return  'No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n'
+      }else if(num === 1){
+        return '1 bottle of beer on the wall, 1 bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n'
+      }else if(num === 2){
+        return '2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n'
+      }else{
+        return num + ' bottles of beer on the wall, ' + num + ' bottles of beer.\nTake one down and pass it around, ' + (num - 1) + ' bottles of beer on the wall.\n'
+      }
+    },
+
+    sing: function(first, last) {
+      if(last === undefined){
+        last = 0
+      }
+      var song = []
+      for (var i = first; i >= last; i--) {
+        song.push(this.verse(i))
+      }
+      return song.join("\n")
     }
+  }
 }
 
-
-module.exports = BeerSong
+module.exports = BeerSong;
