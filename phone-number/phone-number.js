@@ -21,7 +21,9 @@ PhoneNumber.prototype.areaCode = function(){
 }
 
 PhoneNumber.prototype.toString = function(){
+  var num = this.numArray1.split('')
   
+  return num
 }
 
 module.exports = PhoneNumber
