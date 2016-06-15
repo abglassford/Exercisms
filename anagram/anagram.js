@@ -3,16 +3,22 @@ var Anagram = function(input){
 }
 
 Anagram.prototype.matches = function(match){
-  var empty = []
-  for(var i = 0; i < this.gram.length; i++){
-    for(var j = 0; j < i; j++){
-      if(this.gram[i] === match[i].charAt(j)){
-        return match[i]
-      }else{
-        return empty
+  var sublist = []
+
+  for(var i = 0; i < match.length; i++){
+      for(var j = 0; j < this.gram.length; j++){
+        for(var k = 0; k < match[j].length; k++){
+            if(this.gram[j] === match[j].charAt(k)){
+              
+
+            }
+        }
+
       }
+
+
   }
-  }
+  return sublist
 }
 
 module.exports = Anagram
