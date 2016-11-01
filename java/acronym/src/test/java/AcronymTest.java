@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 
 public class AcronymTest {
 
-
     @Test
     public void fromTitleCasedPhrases() {
         final String phrase = "Portable Network Graphics";
