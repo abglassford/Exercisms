@@ -7,7 +7,9 @@
 
 function helloWorld($name = null)
 {
-    //
-    // YOUR CODE GOES HERE
-    //
+  if ($name == null) {
+    return 'Hello, World!';
+  } else {
+    return 'Hello, ' . $name . '!';
+  }
 }
