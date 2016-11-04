@@ -11,8 +11,8 @@ Pangram.prototype.isPangram = function(){
   for(var i = 0; i < gram.length; i++){
     for(var j = 0; j < alphaArray.length; j++){
       if(gram[i] === alphaArray[j]){
-      alphaArray[j] = 1
-      alphaCount += alphaArray[j]
+      alphaArray[j] = '*';
+      alphaCount ++;
     }
   }
 }
