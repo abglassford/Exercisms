@@ -1,8 +1,6 @@
 <?php
-
 function from($date) {
-    $gs = clone $date;
-    $gs->add(new DateInterval('PT1000000000S'));
-    print $gs;
-    return $gs;
+  $timeStamp = $date->getTimestamp() + 1000000000;
+  $newDate = date('Y-m-d H:i:s', $timeStamp);
+  return new DateTime($newDate);
 }

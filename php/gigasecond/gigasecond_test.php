@@ -14,6 +14,7 @@ class GigasecondTest extends \PHPUnit_Framework_TestCase
 
     public function testDate1()
     {
+        // $this->markTestSkipped();
         $date = GigasecondTest::dateSetup("2011-04-25");
         $gs = from($date);
 
@@ -70,9 +71,9 @@ class GigasecondTest extends \PHPUnit_Framework_TestCase
         // Replace the string "you_birthday" with your birthday's datestring
 
         // $this->markTestSkipped("Skip");
-        $your_birthday = GigasecondTest::dateSetup("1991-11-07");
+        $your_birthday = GigasecondTest::dateSetup("1991-11-07 02:00:00");
         $gs = from($your_birthday);
 
-        $this->assertSame("2046-10-03 01:46:39", $gs->format("Y-m-d H:i:s"));
+        $this->assertSame("2023-07-16 03:46:40", $gs->format("Y-m-d H:i:s"));
     }
 }
