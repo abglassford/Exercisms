@@ -6,7 +6,7 @@ function Robot () {
   let num3 = randNum()
   this.name = `${letter1}${letter2}${num1}${num2}${num3}`
 }
-function randChar () {
+function randChar ()l {
     let possible = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
     let randomChar = possible.charAt(Math.floor(Math.random() * possible.length));
     return randomChar;
