@@ -1,11 +1,21 @@
 class ETL {
   transform (oldVal) {
     let newVal = {}
-    let newKeys = oldVal[1].filter((el) => {
-      return el.toLowerCase();
-    })
-    console.log(newKeys);
+    let newKeys = []
+    let newVals = []
+
+    for (var key in oldVal) {
+      oldVal[key].forEach((el) => {
+        newVal[el.toLowerCase()] = parseInt(key)
+      })
+    }
+    return newVal
   }
+
+
+
+
+
 
 
 }
