@@ -4,12 +4,12 @@
 //
 
 class HelloWorld {
-  hello() {
-    //
-    // YOUR CODE GOES HERE
-    //
+  hello(person) {
+    if (person) {
+      return `Hello, ${person}!`;
+    }
+    return `Hello, World!`;
   }
 }
 
 export default HelloWorld;
-
